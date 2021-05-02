@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <title>WebStudio Главная</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <title>WebStudio Главная</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css" />
+   
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -14,7 +15,7 @@
     <header class="header">
       <div class="container header__container">
         <nav class="navigation">
-          <a href="index.html" class="link header__logo">
+          <a class="link header__logo" href="index.html">
             <span class="web">Web</span><span class="studio">Studio</span></a>
           <ul class="list">
             <li class="header__menu-item">
@@ -24,7 +25,7 @@
               <a href="./porfolio.html" class="link header__menu-link">Портфолио</a>
             </li>
             <li class="header__menu-item">
-              <a href="/Contacts" class="link header__menu-link">Контакты</a>
+              <a href="" class="link header__menu-link">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -59,7 +60,7 @@
                    <use href="./images/icons-sprite.svg#icon-close-black"></use>
                  </svg>
                </button>
-              <form action="" class="modal__form">
+              <form action class="modal__form">
                <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
                   <label for="name" class="modal__lable">Имя</label>
                     <div class="modal__form-block">
@@ -82,7 +83,7 @@
                         <use href="./images/icons-sprite.svg#icon-email-black"></use>
                       </svg>
                     </div>
-                    <label for="commints" class="modal__lable">Коментарий
+                    <label for="mail" class="modal__lable">Коментарий
                     <textarea name="commints" id="commints" rows="8" class="modal__commint" placeholder="Введите текст"></textarea>
                   </label>
                   
@@ -103,53 +104,63 @@
       <!--требования к команде-->
       <section class="features">
         <div class="container">
-          <ul class="feature__list">
-            <li class="feature__item">
-                 <div class="feature__icon">
-                   <svg class="features__icon" width="70" height="70">
-                    <use href="./images/icons-sprite.svg#icon-antenna"></use>
-                   </svg>
-                  </div>
+          <ul class="list">
+            <div class="feature">
+              <div class="feature__icon">
+                <svg>
+                  <use href="./images/icons-sprite.svg#icon-antenna"></use>
+                </svg>
+              </div>
+              <li class="feature-item">
                 <h3 class="feature__main-text">Внимание к деталям</h3>
                 <p class="feature__text">
                   Идейные соображения, а также начало повседневной работы по
-                  формированию позиции.</p>
-            </li>
-          <li class="feature__item">
+                  формированию позиции.
+                </p>
+              </li>
+            </div>
+            <div class="feature">
               <div class="feature__icon">
-                <svg class="features__icon" width="70" height="70">
+                <svg>
                   <use href="./images/icons-sprite.svg#icon-clock"></use>
                 </svg>
               </div>
-               <h3 class="feature__main-text">Пунктуальность</h3>
+              <li class="feature-item">
+                <h3 class="feature__main-text">Пунктуальность</h3>
                 <p class="feature__text">
                   Задача организации, в особенности же рамки и место обучения
                   кадров влечет за собой.
                 </p>
-           </li>
-          <li class="feature__item">
-             <div class="feature__icon">
-                <svg class="features__icon" width="70" height="70">
+              </li>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">
+                <svg>
                   <use href="./images/icons-sprite.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h3 class="feature__main-text">Планирование</h3>
+              <li class="feature-item">
+                <h3 class="feature__main-text">Планирование</h3>
                 <p class="feature__text">
                   Равным образом консультация с широким активом в значительной
                   степени обуславливает.
                 </p>
-            </li>
-            <li class="feature__item">
+              </li>
+            </div>
+            <div class="feature">
               <div class="feature__icon">
-                <svg class="features__icon" width="70" height="70">
+                <svg>
                   <use href="./images/icons-sprite.svg#icon-astronaut"></use>
                 </svg>
               </div>
+              <li class="feature-item">
                 <h3 class="feature__main-text">Современные технологии</h3>
                 <p class="feature__text">
                   Значимость этих проблем настолько очевидна, что реализация
-                  плановых заданий. </p>
+                  плановых заданий.
+                </p>
               </li>
+            </div>
           </ul>
         </div>
       </section>
@@ -159,24 +170,30 @@
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="work__boxes">
-            <li class="work__box-product">
-               <img src="./images/box-1.jpg" alt="работа на планшете" width="370"/>
-               <div class="work__content">
+            <div class="work__box-product">
+                   <li>
+                        <img src="./images/box-1.jpg" alt="работа на планшете" width="370"/>
+                            <div class="work__content">
                 <p>Десктопные приложения</p>
               </div>
-            </li>
-            <li class="work__box-product">
+                   </li>
+            </div>
+            <div class="work__box-product">
+              <li>
                 <img src="./images/box-2.jpg" alt="мобильные приложения" width="370"/>
                 <div class="work__content">
                   <p>Мобильные приложения</p>
                 </div>
-            </li>
-            <li class="work__box-product">
+              </li>
+            </div>
+            <div class="work__box-product">
+              <li>
                 <img src="./images/box-3.jpg" alt="цветные соты на планшете" width="370"/>
                 <div class="work__content">
                   <p>Дизайнерские решения</p>
                 </div>
               </li>
+            </div>
           </ul>
         </div>
       </section>
@@ -507,7 +524,9 @@
                    </form>
               </div>
         </div>
+          
     </footer>
+    <!-- ----скрипт--- -->
     <script src="./js/modal.js"></script>
   </body>
 </html>

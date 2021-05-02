@@ -448,12 +448,12 @@ button:focus {
   border-radius: 50%;
 }
 
-.team__icon svg {
+.social-icon-link.team__icon svg {
   fill: var(--social-color);
 }
 
-.team__icon:hover svg,
-.team__icon:focus svg {
+.social-icon-link.team__icon:hover svg,
+.social-icon-link.team__icon:focus svg {
   fill: var(--content-color);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -481,8 +481,12 @@ button:focus {
   list-style: none;
 }
 
-.client__logo:hover,
-.client__logo:focus {
+.social-icons .client__logo {
+  fill: var(--social-color);
+}
+
+.client__link:hover .client__logo,
+.client__link:focus .client__logo {
   fill: var(--accent-color);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -509,6 +513,8 @@ button:focus {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* -------------ХЕДЕР-------------- */
 
 .navigation {
   display: flex;
@@ -611,6 +617,7 @@ button:focus {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ---------------------ФУТЕР---------------- */
 .footer {
   padding: 60px 0;
   box-sizing: border-box;
@@ -715,20 +722,21 @@ button:focus {
   fill: var(--content-color);
 }
 
-.footer__icon svg {
+.social-icon-link.footer__icon svg {
   fill: var(--content-color);
 }
 
-.footer__icon {
+.social-icon-link.footer__icon {
   background: rgba(255, 255, 255, 0.1);
 }
-.footer__icon:hover,
-.footer__icon:focus {
+.social-icon-link.footer__icon:hover,
+.social-icon-link.footer__icon:focus {
   background: var(--accent-color);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ------МОДАЛЬНОЕ ОКНО------- */
 .backdrop {
   position: fixed;
   width: 100%;
@@ -774,12 +782,12 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+
   background: var(--content-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 50%;
 }
-
 .modal__btn:hover svg,
 .modal__btn:focus svg {
   fill: var(--accent-color);
@@ -819,7 +827,6 @@ button:focus {
   margin-right: auto;
   margin-left: auto;
 }
-
 .modal__lable {
   display: block;
   font-style: normal;
@@ -856,7 +863,6 @@ button:focus {
   position: relative;
   width: 100%;
 }
-
 .modal__icon {
   position: absolute;
   top: 50%;
@@ -919,8 +925,10 @@ textarea {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+
   width: 15px;
   height: 15px;
+
   background-color: var(--content-color);
   border: 2px solid var(--title-color);
   border-radius: 2px;
